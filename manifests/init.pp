@@ -36,6 +36,10 @@
 #     Only set this on Solaris 10 (required)
 #     Default: /var/sadm/install/admin/puppet
 #
+#   [*secure_path*]
+#     The secure_path variable in sudoers
+#     Default: varies with OS
+#
 #   [*purge*]
 #     Whether or not to purge sudoers.d directory
 #     Default: true
@@ -115,6 +119,7 @@ class sudo (
   String                                    $package_ensure      = $sudo::params::package_ensure,
   Optional[String]                          $package_source      = $sudo::params::package_source,
   Optional[String]                          $package_admin_file  = $sudo::params::package_admin_file,
+  Optional[String]                          $secure_path         = $sudo::params::secure_path,
   Boolean                                   $purge               = true,
   Optional[Variant[String, Array[String]]]  $purge_ignore        = undef,
   Optional[String]                          $suffix              = undef,

@@ -26,6 +26,7 @@ class sudo::params {
       $package_ensure    = 'present'
       $package_source    = ''
       $package_admin_file = ''
+      $secure_path = '/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/puppetlabs/bin'
       $config_file       = '/etc/sudoers'
       $config_dir        = '/etc/sudoers.d'
       $config_file_group = 'root'
@@ -45,6 +46,7 @@ class sudo::params {
       }
       $package_source = ''
       $package_admin_file = ''
+      $secure_path = '/sbin:/usr/sbin:/bin:/usr/bin:/opt/puppetlabs/bin'
       $config_file = '/etc/sudoers'
       $config_dir = '/etc/sudoers.d'
       $content = $::operatingsystemrelease ? {
@@ -63,6 +65,7 @@ class sudo::params {
       $package_ensure = 'present'
       $package_source = ''
       $package_admin_file = ''
+      $secure_path = '/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/puppetlabs/bin'
       $config_file = '/etc/sudoers'
       $config_dir = '/etc/sudoers.d'
       $content = "${content_base}sudoers.suse.erb"
@@ -77,6 +80,7 @@ class sudo::params {
           $package_ensure = 'present'
           $package_source = ''
           $package_admin_file = ''
+          $secure_path = '/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/puppetlabs/bin'
           $config_file = '/etc/sudoers'
           $config_dir = '/etc/sudoers.d'
           $content = "${content_base}sudoers.omnios.erb"
@@ -89,6 +93,7 @@ class sudo::params {
           $package_ensure = 'present'
           $package_source = ''
           $package_admin_file = ''
+          $secure_path = '/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/puppetlabs/bin'
           $config_file = '/opt/local/etc/sudoers'
           $config_dir = '/opt/local/etc/sudoers.d'
           $content = "${content_base}sudoers.smartos.erb"
@@ -103,6 +108,7 @@ class sudo::params {
               $package_ensure = 'present'
               $package_source = ''
               $package_admin_file = ''
+              $secure_path = '/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/puppetlabs/bin'
               $config_file = '/etc/sudoers'
               $config_dir = '/etc/sudoers.d'
               $content = "${content_base}sudoers.solaris.erb"
@@ -115,6 +121,7 @@ class sudo::params {
               $package_ensure = 'present'
               $package_source = "http://www.sudo.ws/sudo/dist/packages/Solaris/10/TCMsudo-1.8.9p5-${::hardwareisa}.pkg.gz"
               $package_admin_file = '/var/sadm/install/admin/puppet'
+              $secure_path = '/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/puppetlabs/bin'
               $config_file = '/etc/sudoers'
               $config_dir = '/etc/sudoers.d'
               $content = "${content_base}sudoers.solaris.erb"
