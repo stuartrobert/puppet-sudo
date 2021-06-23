@@ -37,8 +37,9 @@
 #     Default: /var/sadm/install/admin/puppet
 #
 #   [*secure_path*]
-#     The secure_path variable in sudoers
-#     Default: varies with OS
+#     The secure_path variable in sudoers. The new default is secure, where the old is not.
+#     The old default is: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin
+#     Default: /sbin:/usr/sbin:/bin:/usr/bin
 #
 #   [*purge*]
 #     Whether or not to purge sudoers.d directory
