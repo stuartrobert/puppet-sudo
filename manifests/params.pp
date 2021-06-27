@@ -169,6 +169,7 @@ class sudo::params {
       $package_ensure = 'present'
       $package_source = 'http://www.sudo.ws/sudo/dist/packages/AIX/5.3/sudo-1.8.27-1.aix53.rpm'
       $package_admin_file = ''
+      $secure_path = ''
       $config_file = '/etc/sudoers'
       $config_dir = '/etc/sudoers.d'
       $content = "${content_base}sudoers.aix.erb"
